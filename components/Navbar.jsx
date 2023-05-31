@@ -30,7 +30,7 @@ export default function NavBar() {
   return (
     <header
       id="navbar"
-      className=" text-light w-full px-32 py-4 font-normal flex items-center justify-between"
+      className="fixed bg-dark text-light w-full px-32 py-4 font-normal flex items-center justify-between"
     >
       <Logo />
       <nav>
