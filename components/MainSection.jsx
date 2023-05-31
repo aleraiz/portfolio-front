@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function MainSection() {
   return (
-    <div className="flex items-center justify-between w-full min-h-screen px-32 py-20">
+    <div
+      className="flex items-center justify-between w-full min-h-screen px-32 py-20"
+      id="mainSection"
+    >
       <div className="w-1/2">
         <Image
           src={profileImg}

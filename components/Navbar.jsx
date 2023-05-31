@@ -1,11 +1,20 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 
-const CustomLink = ({ href, name, className = "" }) => {
+const CustomLink = ({ to, name, className = "", offset }) => {
   const router = useRouter();
+  console.log(router);
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link
+      to={to}
+      spy={true}
+      smooth={true}
+      offset={offset}
+      duration={1000}
+      activeClass="active"
+      className={`${className} relative group cursor-pointer`}
+    >
       {name}
       <span
         className={`h-[1px] inline-block w-0 bg-light absolute -mt-1 right-0 top-0.5
@@ -15,9 +24,8 @@ const CustomLink = ({ href, name, className = "" }) => {
         &nbsp;
       </span>
       <span
-        className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
+        className={`h-[1px] inline-block w-0 bg-light absolute left-0 -bottom-0.5
         group-hover:w-full transition-[width] ease duration-300
-        ${router.asPath === href ? "w-full" : "w-0"}
         `}
       >
         &nbsp;
@@ -34,10 +42,20 @@ export default function NavBar() {
     >
       <Logo />
       <nav>
-        <CustomLink href="/" name="Home" className="mr-3" />
-        <CustomLink href="/about" name="About" className="mx-3" />
-        <CustomLink href="/projects" name="Projects" className="mx-3" />
-        <CustomLink href="/contact" name="Contact" className="ml-3" />
+        <CustomLink
+          to="mainSection"
+          name="Home"
+          className="mr-3"
+          offset={-50}
+        />
+        <CustomLink to="about" name="About" className="mx-3" offset={-50} />
+        <CustomLink
+          to="projects"
+          name="Projects"
+          className="mx-3"
+          offset={-50}
+        />
+        <CustomLink to="contact" name="Contact" className="ml-3" offset={0} />
       </nav>
     </header>
   );

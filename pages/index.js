@@ -12,8 +12,8 @@ export default function Home() {
       <NavBar />
       <MainSection />
       <About />
-      <Contact />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

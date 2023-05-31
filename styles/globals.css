@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.active span:last-of-type {
+  width: 100%;
+}

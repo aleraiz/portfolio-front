@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="w-full lg:min-h-screen px-32 border border-light py-8 lg:py-24 section">
+    <div
+      className="w-full lg:min-h-screen px-32 border border-light py-8 lg:py-24 section"
+      id="contact"
+    >
       <div className="flex items-center justify-center ">
         <Link
           href="/CV-AlejandroRaiz.pdf"
