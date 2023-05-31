@@ -1,7 +1,7 @@
 export default function Projects() {
   return (
     <div
-      className="w-full min-h-screen px-32 border border-light py-20"
+      className="w-full min-h-screen px-32 border border-light py-8 lg:py-20"
       id="projects"
     >
       <div className="flex items-center justify-center text-light">

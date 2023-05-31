@@ -55,7 +55,7 @@ export default function NavBar() {
           className="mx-3"
           offset={-50}
         />
-        <CustomLink to="contact" name="Contact" className="ml-3" offset={0} />
+        <CustomLink to="contact" name="Contact" className="ml-3" offset={10} />
       </nav>
     </header>
   );
