@@ -1,10 +1,7 @@
 import { Link } from "react-scroll";
 import Logo from "./Logo";
-import { useRouter } from "next/router";
 
 const CustomLink = ({ to, name, className = "", offset }) => {
-  const router = useRouter();
-  console.log(router);
   return (
     <Link
       to={to}

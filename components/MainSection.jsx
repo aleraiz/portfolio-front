@@ -17,7 +17,7 @@ export default function MainSection() {
       </div>
       <div className="w-1/2 flex flex-col items-start self-center">
         <TextAnimated text={"Hey! I'm Alejandro Raíz"} />
-        <p className="text-2xl text-primary">Full Stack Developer</p>
+        <p className="text-2xl mt-4 text-primary">Full Stack Developer</p>
       </div>
     </div>
   );
