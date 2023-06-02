@@ -1,10 +1,11 @@
-export default function TextAnimated({ text, className = "" }) {
+export default function TextAnimated({ text, name, className = "" }) {
   return (
-    <div className="w-full mx-auto py-2 overflow-hidden flex items-start justify-center">
+    <div className="w-full py-2  flex items-center justify-center">
       <h1
-        className={`${className} inline-block w-full text-light font-bold capitalize text-6xl`}
+        className={`${className} as inline-block w-full text-light font-bold capitalize text-4xl lg:text-6xl text-center`}
       >
-        {text}
+        {text} <br />
+        {name}
       </h1>
     </div>
   );

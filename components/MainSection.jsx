@@ -5,19 +5,22 @@ import Image from "next/image";
 export default function MainSection() {
   return (
     <div
-      className="flex items-center justify-between w-full min-h-screen px-32 py-8 lg:py-20"
+      className="flex flex-col md:flex-row items-center lg:justify-items-center w-full min-h-screen px-8 md:px-20 py-8 lg:py-20 pt-32 md:pt-20"
       id="mainSection"
     >
-      <div className="w-1/2">
+      <div className="w-3/4 md:w-1/2">
         <Image
           src={profileImg}
           alt="ProfileImage"
           className="w-full h-auto"
         ></Image>
       </div>
-      <div className="w-1/2 flex flex-col items-start self-center">
-        <TextAnimated text={"Hey! I'm Alejandro Raíz"} />
-        <p className="text-2xl mt-4 text-primary">Full Stack Developer</p>
+      <div className="w-3/4 md:w-1/2 flex flex-col items-start self-center">
+        {/* <TextAnimated text={"Hey! I'm Ale Raíz"} /> */}
+        <TextAnimated text={"Hey! I'm"} name={"Ale Raíz"} />
+        <h2 className="w-full text-2xl mt-4 text-primary text-center">
+          Full Stack Developer
+        </h2>
       </div>
     </div>
   );
