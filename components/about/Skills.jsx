@@ -14,15 +14,19 @@ export default function Skills() {
     <div className="flex flex-col items-center my-24">
       <h3 className="text-light text-3xl mb-10">Skills</h3>
       <div className=" w-full flex  flex-wrap h-auto items-center justify-around">
-        <SkillLogo className={"w-3/6"} imgSrc={htmlImage} />
-        <SkillLogo className={"w-3/6"} imgSrc={cssImage} />
-        <SkillLogo className={"w-4/6"} imgSrc={javaScript} />
-        <SkillLogo className={"w-4/6"} imgSrc={reactLogo} />
-        <SkillLogo className={"w-6/6"} imgSrc={reduxLogo} />
-        <SkillLogo className={"w-4/6"} imgSrc={nextJs} />
-        <SkillLogo className={"w-4/6"} imgSrc={mySQL} />
-        <SkillLogo className={"w-4/6"} imgSrc={mongo} />
-        <SkillLogo className={"w-4/6"} imgSrc={git} />
+        <SkillLogo className={"w-3/6"} imgSrc={htmlImage} alt={"HTML logo"} />
+        <SkillLogo className={"w-3/6"} imgSrc={cssImage} alt={"CSS logo"} />
+        <SkillLogo
+          className={"w-4/6"}
+          imgSrc={javaScript}
+          alt={"JavScript logo"}
+        />
+        <SkillLogo className={"w-4/6"} imgSrc={reactLogo} alt={"React logo"} />
+        <SkillLogo className={"w-6/6"} imgSrc={reduxLogo} alt={"Redux logo"} />
+        <SkillLogo className={"w-4/6"} imgSrc={nextJs} alt={"NextJs logo"} />
+        <SkillLogo className={"w-4/6"} imgSrc={mySQL} alt={"MySQL logo"} />
+        <SkillLogo className={"w-4/6"} imgSrc={mongo} alt={"MongoDB logo"} />
+        <SkillLogo className={"w-4/6"} imgSrc={git} alt={"Git logo"} />
       </div>
     </div>
   );

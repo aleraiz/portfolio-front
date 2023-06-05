@@ -39,7 +39,7 @@ export default function NavBar({ isOpen, setOpen }) {
   return (
     <header
       id="navbar"
-      className="bg-transparent  text-light w-full px-8 md:px-20 py-4 font-normal flex items-center justify-between fixed"
+      className="bg-dark  text-light w-full px-8 md:px-10 lg:px-20 py-4 font-normal flex items-center justify-between fixed"
     >
       <Logo />
       <nav className="hidden lg:block">
