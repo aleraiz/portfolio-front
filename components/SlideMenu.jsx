@@ -12,27 +12,27 @@ export default function SlideMenu({ isOpen, setOpen }) {
           onClick={() => setOpen(!isOpen)}
           to="mainSection"
           name="Home"
-          className=""
+          className="text-center"
           offset={-50}
         />
         <CustomLink
           to="about"
           name="About"
-          className=""
+          className="text-center"
           offset={-50}
           onClick={() => setOpen(!isOpen)}
         />
         <CustomLink
           to="projects"
           name="Projects"
-          className=""
+          className="text-center"
           offset={-50}
           onClick={() => setOpen(!isOpen)}
         />
         <CustomLink
           to="contact"
           name="Contact"
-          className=""
+          className="text-center"
           offset={10}
           onClick={() => setOpen(!isOpen)}
         />
