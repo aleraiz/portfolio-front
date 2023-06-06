@@ -13,11 +13,11 @@ export default function Contact() {
       <div className="flex flex-col items-center justify-center">
         <div>
           <form className="flex w-full max-w-sm space-x-3">
-            <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-dark rounded-lg shadow dark:bg-gray-800">
-              <div className="mb-6 text-3xl font-light text-center text-light dark:text-white">
+            <div className="w-full max-w-2xl px-5 py-2 md:py-10 m-auto mt-10 bg-dark rounded-lg shadow dark:bg-gray-800">
+              <div className="mb-6  font-light text-center text-light dark:text-white">
                 Want to work together or have any questions?
               </div>
-              <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
+              <div className="grid max-w-xl grid-cols-2 gap-4 m-auto mt-10">
                 <div className="col-span-2 lg:col-span-1">
                   <div className=" relative ">
                     <input
