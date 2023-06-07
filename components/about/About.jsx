@@ -1,3 +1,4 @@
+import Certificates from "./Certificates";
 import Skills from "./Skills";
 
 export default function About() {
@@ -22,6 +23,7 @@ export default function About() {
         </p>
       </div>
       <Skills />
+      <Certificates />
     </div>
   );
 }

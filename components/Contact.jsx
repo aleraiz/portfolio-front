@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Contact() {
@@ -10,7 +11,7 @@ export default function Contact() {
       <div className="flex items-center justify-center text-light">
         <h3 className="text-4xl">Contact</h3>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center">
         <div>
           <form className="flex w-full max-w-sm space-x-3">
             <div className="w-full max-w-2xl px-5 py-2 md:py-10 m-auto mt-10 bg-dark rounded-lg shadow dark:bg-gray-800">
@@ -62,7 +63,16 @@ export default function Contact() {
             </div>
           </form>
         </div>
-        {/* <div className="flex items-center justify-center ">
+        <div className="md:flex w-6/12 hidden">
+          {/* <Image
+            src={animation}
+            alt="ProfileImage"
+            width={300}
+            height={300}
+            className=""
+          /> */}
+
+          {/* <div className="flex items-center justify-center ">
           <Link
             href="/CV-AlejandroRaiz.pdf"
             target={"_blank"}
@@ -84,6 +94,7 @@ export default function Contact() {
             Contact
           </Link>
         </div> */}
+        </div>
       </div>
     </div>
   );
