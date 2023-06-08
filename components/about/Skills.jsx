@@ -11,7 +11,7 @@ import git from "../../public/git.svg";
 
 export default function Skills() {
   return (
-    <div className="flex flex-col items-center my-24">
+    <div className="flex flex-col items-center mx-auto my-24 lg:w-[75%]">
       <h3 className="text-light text-3xl mb-10">Skills</h3>
       <div className=" w-full flex  flex-wrap h-auto items-center justify-around">
         <SkillLogo className={"w-3/6"} imgSrc={htmlImage} alt={"HTML logo"} />

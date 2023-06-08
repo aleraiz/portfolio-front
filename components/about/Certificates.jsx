@@ -13,7 +13,7 @@ export default function Certificates() {
           width={480}
           height={480}
           alt="Web development certificate"
-          className="lg:hover:scale-110 hover:transition ease-in-out duration-1000 cursor-pointer"
+          className="lg:hover:scale-105 hover:transition ease-in-out duration-1000 cursor-pointer"
         />
         <Image
           src={JavaScriptCertificate}
