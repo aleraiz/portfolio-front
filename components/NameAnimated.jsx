@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 
-export default function TextAnimated({ text }) {
-  const lettersText = Array.from(text);
+export default function NameAnimated({ name }) {
+  const lettersName = Array.from(name);
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.12, delayChildren: 1 * i },
     }),
   };
 
@@ -39,7 +39,7 @@ export default function TextAnimated({ text }) {
       animate="visible"
       className="hidden text-4xl sm:text-6xl lg:text-7xl w-full py-2 md:flex xl:hidden items-center justify-center"
     >
-      {lettersText.map((letter, index) => (
+      {lettersName.map((letter, index) => (
         <motion.span variants={child} key={index}>
           {letter === " " ? "\u00A0" : letter}
         </motion.span>

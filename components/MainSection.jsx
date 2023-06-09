@@ -1,6 +1,8 @@
 import profileImg from "../public/developer-pic-1.png";
 import TextAnimated from "@/components/TextAnimated";
 import Image from "next/image";
+import NameAnimated from "./NameAnimated";
+import TextNameAnimated from "./TextNameAnimated";
 
 export default function MainSection() {
   return (
@@ -16,8 +18,9 @@ export default function MainSection() {
         ></Image>
       </div>
       <div className="w-3/4 md:w-1/2 flex flex-col items-start self-center mb-auto md:mb-0">
-        {/* <TextAnimated text={"Hey! I'm Ale Raíz"} /> */}
-        <TextAnimated text={"Hey! I'm"} name={"Ale Raíz"} />
+        <TextNameAnimated text={"Hey! I'm Ale Raíz"} />
+        <TextAnimated text={"Hey! I'm "} />
+        <NameAnimated name={"Ale Raíz"} />
         <h2 className="w-full text-2xl mt-4 text-primary text-center">
           Full Stack Developer
         </h2>

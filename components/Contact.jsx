@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import pplWorking from "../public/drawingof2softwar.jpg";
 export default function Contact() {
   return (
     <div
@@ -11,10 +11,10 @@ export default function Contact() {
       <div className="flex items-center justify-center text-light">
         <h3 className="text-4xl">Contact</h3>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <div>
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] ">
+        <div className="flex flex-col items-center justify-center h-full my-auto md:w-6/12">
           <form className="flex w-full max-w-sm space-x-3">
-            <div className="w-full max-w-2xl px-5 py-2 md:py-10 m-auto mt-10 bg-dark rounded-lg shadow dark:bg-gray-800">
+            <div className="w-full max-w-2xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
               <div className="mb-6  font-light text-center text-light dark:text-white">
                 Want to work together or have any questions?
               </div>
@@ -63,14 +63,14 @@ export default function Contact() {
             </div>
           </form>
         </div>
-        <div className="md:flex w-6/12 hidden">
-          {/* <Image
-            src={animation}
+        <div className="md:flex justify-center items-center w-2/3 md:w-6/12 m-auto">
+          <Image
+            src={pplWorking}
             alt="ProfileImage"
-            width={300}
-            height={300}
-            className=""
-          /> */}
+            width={400}
+            height={400}
+            className="md:w-[60%]"
+          />
 
           {/* <div className="flex items-center justify-center ">
           <Link

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function TextAnimated({ text }) {
+export default function TextNameAnimated({ text }) {
   const lettersText = Array.from(text);
 
   const container = {
@@ -37,7 +37,7 @@ export default function TextAnimated({ text }) {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="hidden text-4xl sm:text-6xl lg:text-7xl w-full py-2 md:flex xl:hidden items-center justify-center"
+      className="text-2xl flex md:hidden sm:text-6xl lg:text-7xl w-full py-2 xl:flex items-center justify-center"
     >
       {lettersText.map((letter, index) => (
         <motion.span variants={child} key={index}>
