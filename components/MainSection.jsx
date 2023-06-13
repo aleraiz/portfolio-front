@@ -3,6 +3,7 @@ import TextAnimated from "@/components/TextAnimated";
 import Image from "next/image";
 import NameAnimated from "./NameAnimated";
 import TextNameAnimated from "./TextNameAnimated";
+import FsdAnimated from "./FsdAnimated";
 
 export default function MainSection() {
   return (
@@ -21,9 +22,7 @@ export default function MainSection() {
         <TextNameAnimated text={"Hey! I'm Ale Raíz"} />
         <TextAnimated text={"Hey! I'm "} />
         <NameAnimated name={"Ale Raíz"} />
-        <h2 className="w-full text-2xl mt-4 text-primary text-center">
-          Full Stack Developer
-        </h2>
+        <FsdAnimated text={"Full Stack Developer"} />
       </div>
     </div>
   );

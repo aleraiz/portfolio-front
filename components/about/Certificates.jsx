@@ -3,6 +3,7 @@ import webDevCertificate from "../../public/DesarrolloWeb.png";
 import JavaScriptCertificate from "../../public/JavaScript.png";
 import ReactCertificate from "../../public/ReactJs.png";
 import BootcampCertificate from "../../public/Bootcamp.png";
+
 export default function Certificates() {
   return (
     <div className="flex flex-col items-center my-24">
