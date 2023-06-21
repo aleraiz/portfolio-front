@@ -12,13 +12,13 @@ export default function Contact() {
         <h3 className="text-4xl">Contact</h3>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] ">
-        <div className="flex flex-col items-center justify-center h-full my-auto md:w-6/12">
-          <form className="flex w-full max-w-sm space-x-3">
-            <div className="w-full max-w-2xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
+        <div className="flex flex-col items-center justify-center h-full my-auto">
+          <form className="flex w-full  space-x-3">
+            <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
               <div className="mb-6  font-light text-center text-light dark:text-white">
                 Want to work together or have any questions?
               </div>
-              <div className="grid max-w-xl grid-cols-2 gap-4 m-auto mt-10">
+              <div className="grid max-w-2xl grid-cols-2 gap-4 m-auto mt-10">
                 <div className="col-span-2 lg:col-span-1">
                   <div className=" relative ">
                     <input
@@ -63,16 +63,7 @@ export default function Contact() {
             </div>
           </form>
         </div>
-        <div className="md:flex justify-center items-center w-2/3 md:w-6/12 m-auto">
-          <Image
-            src={pplWorking}
-            alt="ProfileImage"
-            width={400}
-            height={400}
-            className="md:w-[60%]"
-          />
-
-          {/* <div className="flex items-center justify-center ">
+        {/* <div className="flex items-center justify-center ">
           <Link
             href="/CV-AlejandroRaiz.pdf"
             target={"_blank"}
@@ -94,7 +85,6 @@ export default function Contact() {
             Contact
           </Link>
         </div> */}
-        </div>
       </div>
     </div>
   );
