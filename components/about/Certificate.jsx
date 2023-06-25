@@ -8,11 +8,10 @@ export default function Certificate({ certificate, i }) {
   const certificatesControl = useAnimation();
 
   useEffect(() => {
-    console.log(isInView);
     isInView ? certificatesControl.start("visible") : null;
   }, [isInView]);
   return (
-    <div ref={ref} key={i + certificate.imgSrc}>
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: {

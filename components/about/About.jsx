@@ -10,7 +10,7 @@ export default function About() {
       <div className="flex items-center justify-center text-light">
         <h3 className="text-4xl">About me</h3>
       </div>
-      <div className="border rounded-2xl mt-8 md:mt-20 md:p-20  shadow-outline">
+      <div className="border rounded-2xl mt-8 md:mt-20 md:p-20 h-[50vh] shadow-outline">
         <p className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
           odit reiciendis tenetur, itaque repudiandae laboriosam officia

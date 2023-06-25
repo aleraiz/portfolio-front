@@ -6,9 +6,13 @@ import javaScript from "../../public/javascriptLogo.svg";
 import reactLogo from "../../public/reactLogo.svg";
 import reduxLogo from "../../public/Redux.png";
 import nextJs from "../../public/next-js.svg";
+import node from "../../public/nodejsLogo.svg";
+import express from "../../public/express.png";
 import mySQL from "../../public/mysql-official.svg";
 import mongo from "../../public/mongodb.png";
 import git from "../../public/git.svg";
+import bootstrap from "../../public/Bootstrap_logo.svg";
+import tailwind from "../../public/Tailwind_CSS_Logo.svg";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const skills = [
@@ -35,11 +39,21 @@ const skills = [
   {
     imgSrc: reduxLogo,
     alt: "Redux logo",
-    style: "w-4/6",
+    style: "w-5/6",
   },
   {
     imgSrc: nextJs,
     alt: "NextJs logo",
+    style: "w-4/6",
+  },
+  {
+    imgSrc: node,
+    alt: "NodeJs logo",
+    style: "w-5/6",
+  },
+  {
+    imgSrc: express,
+    alt: "Express logo",
     style: "w-4/6",
   },
   {
@@ -57,6 +71,16 @@ const skills = [
     alt: "Git logo",
     style: "w-4/6",
   },
+  {
+    imgSrc: bootstrap,
+    alt: "Bootstrap logo",
+    style: "w-4/6",
+  },
+  {
+    imgSrc: tailwind,
+    alt: "Tailwind logo",
+    style: "w-4/6",
+  },
 ];
 
 export default function Skills() {
@@ -69,10 +93,11 @@ export default function Skills() {
   }, [isInView]);
   return (
     <div className="flex flex-col items-center mx-auto my-24 lg:w-[75%]">
-      <h3 ref={ref} className="text-light text-3xl mb-10">
-        Skills
-      </h3>
-      <div className=" w-full flex  flex-wrap h-auto items-center justify-around lg:my-40">
+      <h3 className="text-light text-3xl mb-20">Skills</h3>
+      <div
+        ref={ref}
+        className=" w-full flex  flex-wrap h-auto items-center justify-around "
+      >
         {skills.map((skill, i) => {
           return (
             <motion.div
@@ -82,15 +107,15 @@ export default function Skills() {
                   opacity: 0,
                   translateY: i % 2 === 0 ? "-10vh" : "10vh",
                 },
-                visible: { opacity: 1 },
+                // visible: { opacity: 1 },
                 visible: { opacity: 1, translateY: 0 },
               }}
               initial={"hidden"}
               animate={skillsControl}
               transition={{
                 type: "spring",
-                duration: 1,
-                delay: i * 0.5,
+                duration: 0.5,
+                delay: i * 0.3,
                 bounce: 0.4,
               }}
             >
