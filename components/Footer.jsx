@@ -1,5 +1,5 @@
-import Link from "next/link";
-// import Layout from "./Layout";
+import ExtLink from "next/link";
+import { Link } from "react-scroll";
 import linkedinLogo from "../public/LinkedIn.svg";
 import githubLogo from "../public/githubLogo.png";
 
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="w-full text-light py-6 flex flex-col items-center justify-center">
       <div className="mt-5 flex items-center justify-center flex-wrap">
-        <Link
+        <ExtLink
           href={"https://www.linkedin.com/in/alejandro-raiz/"}
           target={"_blank"}
         >
@@ -20,8 +20,8 @@ export default function Footer() {
             alt="ProfileImage"
             className="hover:scale-110 hover:transition ease duration-300"
           ></Image>
-        </Link>
-        <Link href={"https://github.com/aleraiz"} target={"_blank"}>
+        </ExtLink>
+        <ExtLink href={"https://github.com/aleraiz"} target={"_blank"}>
           <Image
             src={githubLogo}
             width={32}
@@ -29,12 +29,20 @@ export default function Footer() {
             alt="ProfileImage"
             className=" ms-4 hover:scale-110 hover:transition ease duration-300"
           ></Image>
-        </Link>
+        </ExtLink>
       </div>
       <div className="mt-4">
         &copy; Developed by
-        <Link href={"/"}>
-          <span className="ms-1 text-primary">Alejandro Raíz</span>
+        <Link
+          to={"mainSection"}
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={1000}
+          activeClass="active"
+          className="ms-1 text-primary cursor-pointer"
+        >
+          Alejandro Raíz
         </Link>
       </div>
     </footer>
