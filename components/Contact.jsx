@@ -4,7 +4,7 @@ import statics from "../static/statics.json";
 
 export default function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   const formControl = useAnimation();
   useEffect(() => {

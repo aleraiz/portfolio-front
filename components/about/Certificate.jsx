@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Certificate({ certificate, i }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   const certificatesControl = useAnimation();
 
   useEffect(() => {

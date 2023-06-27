@@ -85,7 +85,7 @@ const skills = [
 
 export default function Skills() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.6 });
   const skillsControl = useAnimation();
 
   useEffect(() => {
@@ -107,7 +107,6 @@ export default function Skills() {
                   opacity: 0,
                   translateY: i % 2 === 0 ? "-10vh" : "10vh",
                 },
-                // visible: { opacity: 1 },
                 visible: { opacity: 1, translateY: 0 },
               }}
               initial={"hidden"}
@@ -120,6 +119,7 @@ export default function Skills() {
               }}
             >
               <SkillLogo
+                key={i + skill.imgSrc}
                 className={skill.style}
                 imgSrc={skill.imgSrc}
                 alt={skill.alt}
@@ -128,26 +128,6 @@ export default function Skills() {
           );
         })}
       </div>
-      {/* <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 0.8 }}
-        transition={{ duration: 2 }}
-        className=" w-full flex  flex-wrap h-auto items-center justify-around"
-      >
-        <SkillLogo className={"w-3/6"} imgSrc={htmlImage} alt={"HTML logo"} />
-        <SkillLogo className={"w-3/6"} imgSrc={cssImage} alt={"CSS logo"} />
-        <SkillLogo
-          className={"w-4/6"}
-          imgSrc={javaScript}
-          alt={"JavScript logo"}
-        />
-        <SkillLogo className={"w-4/6"} imgSrc={reactLogo} alt={"React logo"} />
-        <SkillLogo className={"w-6/6"} imgSrc={reduxLogo} alt={"Redux logo"} />
-        <SkillLogo className={"w-4/6"} imgSrc={nextJs} alt={"NextJs logo"} />
-        <SkillLogo className={"w-4/6"} imgSrc={mySQL} alt={"MySQL logo"} />
-        <SkillLogo className={"w-4/6"} imgSrc={mongo} alt={"MongoDB logo"} />
-        <SkillLogo className={"w-4/6"} imgSrc={git} alt={"Git logo"} />
-      </motion.div> */}
     </div>
   );
 }
