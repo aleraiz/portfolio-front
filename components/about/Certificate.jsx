@@ -16,11 +16,11 @@ export default function Certificate({ certificate, i }) {
         variants={{
           hidden: {
             opacity: 0,
-            translateX: i % 2 === 0 ? "-100vw" : "100vw",
+            x: i % 2 === 0 ? "-100vw" : "100vw",
           },
           visible: {
             opacity: 1,
-            translateX: 0,
+            x: 0,
             transition: { duration: 1, delay: 0.5 },
           },
           whileHovering: {

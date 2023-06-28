@@ -12,8 +12,7 @@ import SlideMenu from "@/components/SlideMenu";
 export default function Home() {
   const [isOpen, setOpen] = useState(false);
   return (
-    // <div className={"w-full h-full min-h-screen z-0 bg-dark pt-0  text-white"}>
-    <div className={`w-full h-full min-h-screen bg-dark pt-0  text-white`}>
+    <div className={`w-full h-full bg-dark pt-0 text-white overflow-hidden`}>
       <Head>
         <title>Alejandro Raíz</title>
       </Head>
