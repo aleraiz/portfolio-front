@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+} from "framer-motion";
 import statics from "../static/statics.json";
 import emailjs from "@emailjs/browser";
+import { BsSendCheckFill } from "react-icons/bs";
+import { IconContext } from "react-icons";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -16,6 +23,7 @@ export default function Contact() {
     }
   }, [isInView]);
   const [contactMail, setContactMail] = useState({});
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -36,12 +44,64 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          setEmailSent(true);
+          setTimeout(() => {
+            setEmailSent(false);
+          }, 5000);
+
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
+  };
+
+  const formVariants = {
+    hidden: {
+      opacity: 0,
+      y: 200,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.25,
+      },
+    },
+  };
+
+  const sentEmailVariants = {
+    hidden: {
+      x: -300,
+    },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+      },
+    },
+    exit: {
+      x: "100vw",
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const messageVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      color: "#00E54C",
+      transition: {
+        duration: 3,
+      },
+    },
   };
 
   return (
@@ -56,7 +116,7 @@ export default function Contact() {
         <div className="flex flex-col items-center justify-center h-full my-auto">
           <form
             ref={form}
-            className="flex w-full  space-x-3"
+            className="flex w-full space-x-3"
             onSubmit={sendEmail}
           >
             <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
@@ -68,13 +128,9 @@ export default function Contact() {
               </div>
               <motion.div
                 className="grid max-w-2xl grid-cols-2 gap-4 m-auto mt-10"
-                variants={{
-                  hidden: { opacity: 0, y: 200 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={formVariants}
                 initial="hidden"
                 animate={formControl}
-                transition={{ duration: 1, delay: 0.25 }}
               >
                 <div className="col-span-2 lg:col-span-1">
                   <div className=" relative ">
@@ -124,6 +180,26 @@ export default function Contact() {
               </motion.div>
             </div>
           </form>
+          <AnimatePresence>
+            {emailSent && (
+              <motion.div
+                className="flex items-center justify-center sm:justify-between lg:mt-4"
+                variants={sentEmailVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <motion.p variants={messageVariants} className="text-gray-400 ">
+                  Message sent successfully
+                </motion.p>
+                <IconContext.Provider value={{ size: "30px" }}>
+                  <div className="ms-3 text-gray-400 ">
+                    {<BsSendCheckFill />}
+                  </div>
+                </IconContext.Provider>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         {/* <div className="flex items-center justify-center ">
           <Link
@@ -135,16 +211,6 @@ export default function Contact() {
         "
           >
             Resume
-          </Link>
-          <Link
-            href="mailto:alejandroraiz7@gmail.com"
-            target={"_blank"}
-            className="flex items-center text-light text-lg font-semibold
-        hover:text-primary underline
-        ml-3
-        "
-          >
-            Contact
           </Link>
         </div> */}
       </div>
