@@ -20,12 +20,7 @@ export default function About() {
         className="border rounded-2xl mt-8 md:mt-20 md:p-20 shadow-outline"
       >
         <p className="my-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
-          non, molestiae quis iure debitis sunt. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Magni nulla odit reiciendis tenetur,
-          itaque repudiandae laboriosam officia dignissimos saepe cupiditate
-          dicta maiores reprehenderit. Pariatur non, molestiae quis iure debitis
-          sunt.
+          I am Alejandro, a Full Stack Developer based in Uruguay.
         </p>
         <p className="my-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla

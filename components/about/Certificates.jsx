@@ -27,7 +27,7 @@ export default function Certificates() {
   return (
     <div className="flex flex-col items-center my-24">
       <h3 className="text-light text-3xl mb-10 lg:mb-40">Certificates</h3>
-      <div className=" w-full flex  flex-wrap h-auto items-center justify-around gap-10">
+      <div className="w-full 2xl:w-[80%] flex flex-wrap h-auto items-center justify-around gap-10">
         {certificates.map((certificate, i) => {
           return (
             <Certificate

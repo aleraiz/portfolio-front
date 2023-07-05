@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import statics from "../static/statics.json";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const form = useRef();
 
   const formControl = useAnimation();
   useEffect(() => {
@@ -13,6 +15,34 @@ export default function Contact() {
       formControl.start("visible");
     }
   }, [isInView]);
+  const [contactMail, setContactMail] = useState({});
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    let newContactMail = { ...contactMail, [name]: value };
+    setContactMail(newContactMail);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_9ux09xd",
+        "template_pjl1yld",
+        form.current,
+        "5u1q2cdMobk0igCi-"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div
@@ -24,11 +54,14 @@ export default function Contact() {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] ">
         <div className="flex flex-col items-center justify-center h-full my-auto">
-          <form className="flex w-full  space-x-3">
+          <form
+            ref={form}
+            className="flex w-full  space-x-3"
+            onSubmit={sendEmail}
+          >
             <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
               <div
                 ref={ref}
-                // className="mb-6  font-light text-center text-light dark:text-white"
                 className="mb-6  font-light text-center text-gray-400 dark:text-white"
               >
                 Want to work together or have any questions?
@@ -47,9 +80,11 @@ export default function Contact() {
                   <div className=" relative ">
                     <input
                       type="text"
+                      name="name"
                       id="contact-form-name"
                       className={statics.styles.formInputs}
                       placeholder="Name"
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -57,9 +92,11 @@ export default function Contact() {
                   <div className=" relative ">
                     <input
                       type="text"
+                      name="email"
                       id="contact-form-email"
                       className={statics.styles.formInputs}
                       placeholder="email"
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -67,19 +104,19 @@ export default function Contact() {
                   <label className="text-gray-700" htmlFor="name">
                     <textarea
                       className={`${statics.styles.formInputs} border rounded-sm `}
-                      // className="border-transparent flex-1 appearance-none w-full py-2 px-4 bg-slate-800 border-gray-700 text-gray-400 placeholder-gray-500 focus:ring-2 focus:outline-none focus:ring-gray-700 shadow-slate-600 text-base focus:outline-double border rounded-sm"
-                      id="comment"
+                      id="contact-form-comment"
                       placeholder="Enter your message"
                       name="message"
                       rows="5"
                       cols="40"
+                      onChange={handleChange}
                     ></textarea>
                   </label>
                 </div>
                 <div className="col-span-2 text-right">
                   <button
                     type="submit"
-                    className="py-2 px-4  bg-slate-800 border border-gray-700 text-gray-400 hover:text-gray-400 hover:border-gray-600 hover:scale-105 focus:ring-offset-indigo-200 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2  "
+                    className="py-2 px-4  bg-slate-800 border border-gray-700 text-gray-400 hover:text-gray-400 hover:border-gray-600 hover:scale-105 focus:ring-offset-indigo-200 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                   >
                     Send
                   </button>
