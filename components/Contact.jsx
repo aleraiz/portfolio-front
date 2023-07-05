@@ -85,8 +85,9 @@ export default function Contact() {
     },
     exit: {
       x: "100vw",
+      opacity: 0,
       transition: {
-        duration: 1,
+        duration: 3,
       },
     },
   };
