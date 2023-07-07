@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.active span:last-of-type {
-  width: 100%;
+body {
+  background-color: #1b1b1b;
 }
 
-body {
-  margin: 0;
-  /* overflow: hidden; */
+.active span:last-of-type {
+  width: 100%;
 }
 
 input:-webkit-autofill,

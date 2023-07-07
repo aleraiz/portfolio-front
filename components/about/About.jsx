@@ -40,6 +40,8 @@ export default function About() {
         </p>
         <p className="my-2">
           I'm open to Job opportunities where I can contribute, learn and grow.
+        </p>
+        <p className="my-2">
           I love new challenges, if you have a good opportunity that matches my
           skills, then don't hesitate to{" "}
           <Link
