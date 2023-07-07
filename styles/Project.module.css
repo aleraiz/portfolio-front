@@ -1,0 +1,39 @@
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+  overflow: hidden;
+}
+
+.textContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.imageContainer .textContainer {
+  opacity: 1;
+}
+.imageContainer:hover .textContainer {
+  opacity: 1;
+}

@@ -1,4 +1,5 @@
 import Certificates from "./Certificates";
+import { Link } from "react-scroll";
 import Skills from "./Skills";
 import { useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -20,21 +21,37 @@ export default function About() {
         className="border rounded-2xl mt-8 md:mt-20 md:p-20 shadow-outline"
       >
         <p className="my-2">
-          I am Alejandro, a Full Stack Developer based in Uruguay.
+          I'm Alejandro, a very positive and highly motivated Full Stack
+          Developer based in Uruguay, who enjoys building beautiful websites and
+          web applications.
         </p>
         <p className="my-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
-          odit reiciendis tenetur, itaque repudiandae laboriosam officia
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
+          Check out some of my work in the{" "}
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            className="font-bold cursor-pointer"
+          >
+            Projects{" "}
+          </Link>
+          section.
         </p>
         <p className="my-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
-          odit reiciendis tenetur, itaque repudiandae laboriosam officia
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
-          dignissimos saepe cupiditate dicta maiores reprehenderit. Pariatur
+          I'm open to Job opportunities where I can contribute, learn and grow.
+          I love new challenges, if you have a good opportunity that matches my
+          skills, then don't hesitate to{" "}
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            className="font-bold cursor-pointer"
+          >
+            Contact{" "}
+          </Link>
+          me.
         </p>
       </motion.div>
       <Skills />
