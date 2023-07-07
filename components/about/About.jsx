@@ -7,7 +7,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 export default function About() {
   return (
     <div
-      className="w-full min-h-screen border border-light px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
+      className="w-full min-h-screen border px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
       id="about"
     >
       <div className="flex items-center justify-center text-light">
@@ -18,7 +18,7 @@ export default function About() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true, amount: 0.5 }}
-        className="border rounded-2xl mt-8 md:mt-20 md:p-20 shadow-outline"
+        className="rounded-2xl mt-8 md:mt-20 md:p-20 xl:px-56 shadow-outline"
       >
         <p className="my-2">
           I'm Alejandro, a very positive and highly motivated Full Stack

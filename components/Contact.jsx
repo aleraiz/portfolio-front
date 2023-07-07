@@ -117,7 +117,7 @@ export default function Contact() {
         <div className="flex flex-col items-center justify-center h-full my-auto">
           <form
             ref={form}
-            className="flex w-full space-x-3"
+            className="flex w-full space-x-3 bg-transparent"
             onSubmit={sendEmail}
           >
             <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">

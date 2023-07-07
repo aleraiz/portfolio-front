@@ -42,12 +42,7 @@ export default function NavBar({ isOpen, setOpen }) {
     >
       <Logo />
       <nav className="hidden lg:block">
-        <CustomLink
-          to="mainSection"
-          name="Home"
-          className="mr-3"
-          offset={-50}
-        />
+        <CustomLink to="mainSection" name="Home" className="mr-3" offset={0} />
         <CustomLink to="about" name="About" className="mx-3" offset={-50} />
         <CustomLink
           to="projects"
