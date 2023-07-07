@@ -8,7 +8,7 @@ import FsdAnimated from "./FsdAnimated";
 export default function MainSection() {
   return (
     <div
-      className="flex flex-col md:flex-row items-center lg:justify-items-center w-full min-h-screen px-8 md:px-10 lg:px-20 py-8 lg:py-20 pt-32 md:pt-20"
+      className="flex flex-col md:flex-row items-center lg:justify-items-center w-full min-h-screen px-8 md:px-10 lg:px-20 py-8 lg:py-20 sm:pt-32 md:pt-20"
       id="mainSection"
     >
       <div className="w-full sm:w-3/4 md:w-1/2 my-auto">
