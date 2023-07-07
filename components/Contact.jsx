@@ -107,7 +107,7 @@ export default function Contact() {
 
   return (
     <div
-      className="w-full min-h-screen border border-light px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
+      className="w-full min-h-screen px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
       id="contact"
     >
       <div className="flex items-center justify-center text-light">
@@ -120,7 +120,7 @@ export default function Contact() {
             className="flex w-full space-x-3 bg-transparent"
             onSubmit={sendEmail}
           >
-            <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg shadow dark:bg-gray-800">
+            <div className="w-full max-w-6xl px-5 py-2 md:py-10 m-auto  bg-dark rounded-lg ">
               <div
                 ref={ref}
                 className="mb-6  font-light text-center text-gray-400 dark:text-white"
