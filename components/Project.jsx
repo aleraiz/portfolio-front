@@ -5,20 +5,20 @@ export default function Project({ project }) {
   let { technologies } = project;
 
   return (
-    <div className=" flex flex-col p-2">
-      <div className="flex gap-10">
-        <div className="">
+    <div className="p-2">
+      <div className="grid md:grid-cols-4 gap-5">
+        <div className="md:col-span-1">
           <Image
             src={project.imgSrc}
             width={480}
             height={480}
             alt={project.name}
-            className="cursor-pointer sm:w-[480px]"
+            className="cursor-pointer sm:w-[480px] lg:w-[250px]"
           />
         </div>
-        <div className="hidden lg:flex flex-col justify-center">
+        <div className="hidden md:flex flex-col col-span-3">
           <div className="text-sm">{project.description}</div>
-          <div className="hidden lg:flex gap-2 mt-5 flex-wrap">
+          <div className="hidden md:flex gap-2 mt-5 flex-wrap">
             {technologies &&
               technologies.map((technologie) => {
                 return (

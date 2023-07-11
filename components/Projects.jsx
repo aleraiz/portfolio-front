@@ -20,7 +20,7 @@ const projects = [
     name: "HackShop",
     imgSrc: hackShop,
     description:
-      "HackShop was the final project of the Full Stack Web Development Bootcamp held at Hack Academy. The objective of this project was to put into practice the knowledge acquired during the course using the technologies seen in the course. We developed both the Backend and the FrontEnd using the following technologies: NodeJS, Express, MySQL, Sequelize, HTML, CSS, Bootstrap, React, Redux, among others.",
+      "HackShop was the final project of the Full Stack Web Development Bootcamp held at Hack Academy. The objective of this project was to put into practice the knowledge acquired during the course using the technologies seen in the course. We developed both the Backend and the FrontEnd using the following technologies.",
     technologies: [
       {
         name: "JavaScript",
