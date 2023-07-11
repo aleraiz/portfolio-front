@@ -18,7 +18,7 @@ export default function About() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 3 }}
-        className="rounded-2xl mt-8 md:mt-20 md:p-20 xl:px-56 shadow-outline"
+        className="mt-8 md:mt-20 md:p-20 xl:px-56"
       >
         <p className="my-2">
           I'm Alejandro, a very positive and highly motivated Full Stack

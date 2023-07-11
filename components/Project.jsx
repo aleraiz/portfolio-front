@@ -1,23 +1,47 @@
-import img from "../public/HackFlix.jpg";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import styles from "../styles/Project.module.css";
 
-export default function Project() {
+export default function Project({ project }) {
+  let { technologies } = project;
+
   return (
-    <div className={styles.projectContainer}>
-      <motion.div
-        // whileHover={{ scale: 1.1 }}
-        className={styles.imageContainer}
-        style={{
-          backgroundImage: "url(HackShop.jpg)",
-        }}
-      >
-        <motion.div className={styles.textContainer}>
-          <button className="py-2 px-4  bg-transparent hover:bg-slate-800 hover:border border-gray-700 text-gray-400 hover:text-gray-400 hover:border-gray-600 hover:scale-105 focus:ring-offset-indigo-200  transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2">
-            See More
-          </button>
-        </motion.div>
-      </motion.div>
+    <div className="text-gray-400 flex flex-col">
+      <div className="flex gap-10">
+        <Image
+          src={project.imgSrc}
+          width={480}
+          height={480}
+          alt={project.name}
+          className="cursor-pointer object-contain sm:w-[480px]"
+        />
+        <div className="hidden lg:flex items-center">
+          {/* <div>{project.name}</div> */}
+          <div className="text-sm">{project.description}</div>
+        </div>
+      </div>
+
+      <div className="hidden lg:flex gap-2 mt-5 flex-wrap">
+        {technologies &&
+          technologies.map((technologie) => {
+            return (
+              <div className="flex items-center " key={technologie.name}>
+                <div className="flex items-center">
+                  <Image
+                    src={technologie.techImg}
+                    width={20}
+                    height={20}
+                    alt={`${technologie.name} logo`}
+                    // className="cursor-pointer h-5"
+                    className={`cursor-pointer h-5 ${
+                      technologie.name === "Github" ? "w-50" : ""
+                    }`}
+                  />
+                </div>
+                <div className="text-sm ms-1 ">{technologie.name}</div>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

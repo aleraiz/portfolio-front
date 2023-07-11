@@ -13,6 +13,8 @@ import mongo from "../../public/mongodb.png";
 import git from "../../public/git.svg";
 import bootstrap from "../../public/Bootstrap_logo.svg";
 import tailwind from "../../public/Tailwind_CSS_Logo.svg";
+import gitHub from "../../public/githubLogo.png";
+import sequelize from "../../public/sequelize.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const skills = [
@@ -57,6 +59,11 @@ const skills = [
     style: "w-4/6",
   },
   {
+    imgSrc: sequelize,
+    alt: "Sequelize logo",
+    style: "w-4/6",
+  },
+  {
     imgSrc: mySQL,
     alt: "mySQL logo",
     style: "w-4/6",
@@ -80,6 +87,11 @@ const skills = [
     imgSrc: tailwind,
     alt: "Tailwind logo",
     style: "w-4/6",
+  },
+  {
+    imgSrc: gitHub,
+    alt: "Github logo",
+    style: "w-50 bg-dark",
   },
 ];
 
