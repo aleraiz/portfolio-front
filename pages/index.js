@@ -8,11 +8,13 @@ import MainSection from "@/components/MainSection";
 import { useState } from "react";
 import Head from "next/head";
 import SlideMenu from "@/components/SlideMenu";
+import style from "../styles/Project.module.css";
 
 export default function Home() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div className={`w-full h-full bg-dark pt-0 text-white overflow-hidden`}>
+    <div className={`pt-0 text-white overflow-hidden`}>
+      {/* <div className={`w-full h-full bg-dark pt-0 text-white overflow-hidden`}> */}
       <Head>
         <title>Alejandro Raíz</title>
       </Head>

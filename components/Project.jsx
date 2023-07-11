@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import style from "../styles/Project.module.css";
 
 export default function Project({ project }) {
   let { technologies } = project;
 
   return (
-    <div className="p-2">
-      <div className="grid md:grid-cols-4 gap-5">
+    <div className={`${style.project}`}>
+      <div className="grid md:grid-cols-4 gap-5 bg-dark p-2 rounded-lg">
         <div className="md:col-span-1">
           <Image
             src={project.imgSrc}
@@ -16,7 +17,7 @@ export default function Project({ project }) {
             className="cursor-pointer sm:w-[480px] lg:w-[250px]"
           />
         </div>
-        <div className="hidden md:flex flex-col col-span-3">
+        <div className="hidden md:flex flex-col col-span-3 ">
           <div className="text-sm">{project.description}</div>
           <div className="hidden md:flex gap-2 mt-5 flex-wrap">
             {technologies &&

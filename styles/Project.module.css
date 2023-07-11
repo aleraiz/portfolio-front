@@ -1,41 +1,43 @@
-.projectContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.imageContainer {
+.project {
+  /* height: 400px;
+  aspect-ratio: 1/1.5; */
+  border-radius: 0.5rem;
   position: relative;
-  width: auto;
-  height: auto;
-  /* width: 300px;
-  height: 300px; */
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  background-position: center;
-  overflow: hidden;
 }
 
-.textContainer {
+.project::before,
+.project::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(0.5px);
-  opacity: 0;
-  transition: opacity 0.3s;
+  inset: -0.5rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  animation: rotation 10s linear infinite;
 }
 
-.imageContainer .textContainer {
-  opacity: 1;
+.project::after {
+  filter: blur(2.5rem);
 }
-.imageContainer:hover .textContainer {
-  opacity: 1;
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }

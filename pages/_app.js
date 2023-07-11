@@ -7,7 +7,8 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${manrope.variable} font-manrope bg-dark`}>
+    // <div className={`${manrope.variable} font-manrope bg-dark`}>
+    <div className={`${manrope.variable} font-manrope`}>
       <Component {...pageProps} />
     </div>
   );

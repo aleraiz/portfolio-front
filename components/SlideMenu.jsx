@@ -18,11 +18,6 @@ const slideMenu = {
 
 export default function SlideMenu({ isOpen, setOpen }) {
   return (
-    // <div
-    //   className={`flex flex-col justify-between top-[81px] py-20 fixed items-center border border-light bg-dark z-50  w-[60%] sm:w-[40%] h-[500px] ${
-    //     isOpen ? "right-0 " : "right-[-60%]"
-    //   }  transition-all ease-in duration-700`}
-    // >
     <AnimatePresence>
       {isOpen && (
         <motion.div
@@ -30,7 +25,7 @@ export default function SlideMenu({ isOpen, setOpen }) {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className={`flex flex-col justify-between right-0 top-[81px]  py-20 fixed items-center border border-light bg-dark z-50  w-[60%] sm:w-[40%] h-[500px]`}
+          className={`flex flex-col justify-between right-0 top-[81px]  py-20 fixed items-center  bg-dark z-50  w-[60%] sm:w-[40%] h-[500px]`}
         >
           <nav className="flex flex-col space-y-5">
             <CustomLink

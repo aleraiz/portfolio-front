@@ -18,7 +18,7 @@ export default function About() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 3 }}
-        className="mt-8 md:mt-20 md:p-20 xl:px-56"
+        className="mt-8 md:mt-20 md:p-20 xl:px-56 text-gray-400"
       >
         <p className="my-2">
           I'm Alejandro, a very positive and highly motivated Full Stack
@@ -32,7 +32,7 @@ export default function About() {
             spy={true}
             smooth={true}
             duration={1000}
-            className="font-bold cursor-pointer"
+            className="font-bold cursor-pointer text-light"
           >
             Projects{" "}
           </Link>
@@ -49,7 +49,7 @@ export default function About() {
             spy={true}
             smooth={true}
             duration={1000}
-            className="font-bold cursor-pointer"
+            className="font-bold cursor-pointer text-light"
           >
             Contact{" "}
           </Link>
