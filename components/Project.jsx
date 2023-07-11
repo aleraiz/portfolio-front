@@ -7,14 +7,14 @@ export default function Project({ project }) {
 
   return (
     <div className={`${style.project}`}>
-      <div className="grid md:grid-cols-4 gap-5 bg-dark p-2 rounded-lg">
+      <div className="grid md:grid-cols-4 gap-5 bg-dark md:p-2 rounded-lg">
         <div className="md:col-span-1">
           <Image
             src={project.imgSrc}
             width={480}
             height={480}
             alt={project.name}
-            className="cursor-pointer sm:w-[480px] lg:w-[250px]"
+            className="cursor-pointer sm:w-[480px] lg:w-[250px] rounded-lg md:rounded-none"
           />
         </div>
         <div className="hidden md:flex flex-col col-span-3 ">
