@@ -24,7 +24,13 @@ export default function Project({ project }) {
               technologies.map((technologie) => {
                 return (
                   <div className="flex items-center" key={technologie.name}>
-                    <div className="flex items-center">
+                    <div
+                      className={`flex items-center ${
+                        technologie.name === "NextJs"
+                          ? "bg-light rounded-full"
+                          : ""
+                      }`}
+                    >
                       <Image
                         src={technologie.techImg}
                         width={20}
@@ -32,7 +38,7 @@ export default function Project({ project }) {
                         alt={`${technologie.name} logo`}
                         className={`cursor-pointer h-5 ${
                           technologie.name === "Github" ? "w-50" : ""
-                        }`}
+                        } ${technologie.name === "NextJs" ? "scale-105" : ""}`}
                       />
                     </div>
                     <div className="text-sm ms-1 ">{technologie.name}</div>

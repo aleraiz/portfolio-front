@@ -1,6 +1,7 @@
 import Project from "./Project";
 import hackShop from "../public/HackShop.jpg";
 import hackFlix from "../public/HackFlix.jpg";
+import portfolio from "../public/Portfolio.jpg";
 import javaScriptLogo from "../public/javascriptLogo.svg";
 import reactLogo from "../public/reactLogo.svg";
 import reduxLogo from "../public/Redux.png";
@@ -10,9 +11,12 @@ import bootstrapLogo from "../public/Bootstrap_logo.svg";
 import nodeLogo from "../public/nodejsLogo.svg";
 import expressLogo from "../public/express.png";
 import mysqlLogo from "../public/mysql-official.svg";
+import emailjsLogo from "../public/emailjs.svg";
 import gitLogo from "../public/git.svg";
 import gitHubLogo from "../public/githubLogo.png";
 import sequelizeLogo from "../public/sequelize.png";
+import nextLogo from "../public/next-js.svg";
+import tailwindLogo from "../public/Tailwind_CSS_Logo.svg";
 
 const projects = [
   {
@@ -96,6 +100,30 @@ const projects = [
       {
         name: "Bootstrap",
         techImg: bootstrapLogo,
+      },
+    ],
+  },
+  {
+    name: "Portfolio",
+    imgSrc: portfolio,
+    description:
+      "My personal portfolio was created to showcase my projects and skills. I have done both design and development and I am very happy with the result. I used NextJs to build it, Tailwind CSS to style it, framer motion to create the animations and emailjs for the contact form submission.",
+    technologies: [
+      {
+        name: "NextJs",
+        techImg: nextLogo,
+      },
+      {
+        name: "React",
+        techImg: reactLogo,
+      },
+      {
+        name: "Tailwind",
+        techImg: tailwindLogo,
+      },
+      {
+        name: "EmailJs",
+        techImg: emailjsLogo,
       },
     ],
   },
