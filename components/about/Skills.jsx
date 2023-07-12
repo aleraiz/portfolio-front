@@ -36,7 +36,7 @@ const skills = [
   {
     imgSrc: reactLogo,
     alt: "React logo",
-    style: "w-6/6",
+    style: "w-5/6",
   },
   {
     imgSrc: reduxLogo,
