@@ -17,6 +17,7 @@ import gitHubLogo from "../public/githubLogo.png";
 import sequelizeLogo from "../public/sequelize.png";
 import nextLogo from "../public/next-js.svg";
 import tailwindLogo from "../public/Tailwind_CSS_Logo.svg";
+import framerMotionLogo from "../public/framerMotion.jpg";
 
 const projects = [
   {
@@ -120,6 +121,10 @@ const projects = [
       {
         name: "Tailwind",
         techImg: tailwindLogo,
+      },
+      {
+        name: "Framer motion",
+        techImg: framerMotionLogo,
       },
       {
         name: "EmailJs",
