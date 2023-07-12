@@ -23,6 +23,7 @@ const projects = [
   {
     name: "HackShop",
     imgSrc: hackShop,
+    link: "https://hack-shop.vercel.app",
     description:
       "HackShop was the final project of the Full Stack Web Development Bootcamp held at Hack Academy. The objective of this project was to put into practice the knowledge acquired during the course using the technologies seen in the course. We developed both the Backend and the FrontEnd using the following technologies.",
     technologies: [
@@ -79,6 +80,7 @@ const projects = [
   {
     name: "HackFlix",
     imgSrc: hackFlix,
+    link: "https://hackflix-react.vercel.app",
     description:
       "Web application that uses React Js consuming The Movie Database API to provide an easy-to-use movie and series browsing experience. The application allows users to filter movies and series by category, sort them by popularity, rating and release date, as well as search for movies by title. In addition, users can click on each movie or series to get more information, such as title, overview, average rating and watch a video.",
     technologies: [
@@ -107,6 +109,7 @@ const projects = [
   {
     name: "Portfolio",
     imgSrc: portfolio,
+    link: "mainSection",
     description:
       "My personal portfolio was created to showcase my projects and skills. I have done both design and development and I am very happy with the result. I used NextJs to build it, Tailwind CSS to style it, framer motion to create the animations and emailjs for the contact form submission.",
     technologies: [

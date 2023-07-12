@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import style from "../styles/Project.module.css";
+import { Link } from "react-scroll";
 
 export default function Project({ project }) {
   let { technologies } = project;
@@ -9,13 +10,33 @@ export default function Project({ project }) {
     <div className={`${style.project}`}>
       <div className="grid md:grid-cols-4 gap-5 bg-dark md:p-2 rounded-lg">
         <div className="md:col-span-1">
-          <Image
-            src={project.imgSrc}
-            width={480}
-            height={480}
-            alt={project.name}
-            className="cursor-pointer sm:w-[480px] lg:w-[250px] rounded-lg md:rounded-none"
-          />
+          {project.name === "Portfolio" ? (
+            <Link
+              to={project.link}
+              spy={true}
+              smooth={true}
+              duration={1000}
+              activeClass="active"
+            >
+              <Image
+                src={project.imgSrc}
+                width={480}
+                height={480}
+                alt={project.name}
+                className="cursor-pointer sm:w-[480px] lg:w-[250px] rounded-lg md:rounded-none"
+              />
+            </Link>
+          ) : (
+            <a href={project.link} target="_blank">
+              <Image
+                src={project.imgSrc}
+                width={480}
+                height={480}
+                alt={project.name}
+                className="cursor-pointer sm:w-[480px] lg:w-[250px] rounded-lg md:rounded-none"
+              />
+            </a>
+          )}
         </div>
         <div className="hidden md:flex flex-col col-span-3 ">
           <div className="text-sm">{project.description}</div>
