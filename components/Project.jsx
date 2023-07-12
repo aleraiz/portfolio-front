@@ -57,7 +57,7 @@ export default function Project({ project }) {
                         width={20}
                         height={20}
                         alt={`${technologie.name} logo`}
-                        className={`cursor-pointer h-5 ${
+                        className={`h-5 ${
                           technologie.name === "Github" ? "w-50" : ""
                         } ${technologie.name === "NextJs" ? "scale-105" : ""}`}
                       />
