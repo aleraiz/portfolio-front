@@ -30,7 +30,7 @@ export default function About() {
         <p className="my-2">
           I love new challenges and am always looking for opportunities to
           expand my knowledge and improve my technical skills. I enjoy working
-          in teams and am able to adapt quickly to different work environments.
+          in teams and I'm able to adapt quickly to different work environments.
         </p>
         <p className="my-2">
           Check out some of my work in the{" "}
