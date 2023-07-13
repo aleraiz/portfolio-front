@@ -38,6 +38,7 @@ export default function fsdAnimated({ text }) {
       initial="hidden"
       animate="visible"
       className="w-full text-2xl mt-4 text-primary text-center"
+      // className="w-full text-2xl mt-4 text-primary"
     >
       {lettersName.map((letter, index) => (
         <motion.span variants={child} key={index}>

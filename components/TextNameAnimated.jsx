@@ -37,7 +37,7 @@ export default function TextNameAnimated({ text }) {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="text-2xl flex md:hidden sm:text-6xl lg:text-7xl w-full py-2 xl:flex items-center justify-center"
+      className="text-4xl flex md:hidden sm:text-6xl lg:text-7xl w-full py-2 xl:flex items-center justify-center"
     >
       {lettersText.map((letter, index) => (
         <motion.span variants={child} key={index}>

@@ -106,10 +106,11 @@ export default function Contact() {
   };
 
   return (
-    <div
+    <div className="w-full px-8 md:px-20 pt-32 md:pt-20 py-8 " id="contact">
+      {/* <div
       className="w-full min-h-screen px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
       id="contact"
-    >
+    > */}
       <div className="flex items-center justify-center text-light">
         <h3 className="text-4xl">Contact</h3>
       </div>
