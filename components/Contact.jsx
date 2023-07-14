@@ -22,39 +22,86 @@ export default function Contact() {
       formControl.start("visible");
     }
   }, [isInView]);
-  const [contactMail, setContactMail] = useState({});
+  const [contactMail, setContactMail] = useState({ email: "" });
   const [emailSent, setEmailSent] = useState(false);
+  const [fullForm, SetfullForm] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const [validationEmailMessage, setValidationEmailMessage] = useState("");
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
+  const checkValidation = (email) => {
+    console.log(email);
+    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    if (regEx.test(email)) {
+      setValidationEmailMessage("Email is Valid");
+    } else if (email == "") {
+      setValidationEmailMessage("Please enter email");
+    } else if (!regEx.test(email)) {
+      setValidationEmailMessage("Invalid Email");
+    } else {
+      setValidationEmailMessage("");
+    }
+  };
 
   const handleChange = (e) => {
     let { name, value } = e.target;
     let newContactMail = { ...contactMail, [name]: value };
+
+    checkValidation(newContactMail.email);
+
+    if (
+      newContactMail.name &&
+      newContactMail.name.length > 1 &&
+      newContactMail.email &&
+      validationEmailMessage === "Email is Valid" &&
+      newContactMail.message &&
+      newContactMail.message.length > 1
+    ) {
+      SetfullForm(true);
+    } else {
+      SetfullForm(false);
+    }
     setContactMail(newContactMail);
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_9ux09xd",
-        "template_pjl1yld",
-        form.current,
-        "5u1q2cdMobk0igCi-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setEmailSent(true);
-          setTimeout(() => {
-            setEmailSent(false);
-          }, 5000);
+    {
+      fullForm
+        ? emailjs
+            .sendForm(
+              "service_9ux09xd",
+              "template_pjl1yld",
+              form.current,
+              "5u1q2cdMobk0igCi-"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+                setEmailSent(true);
+                setTimeout(() => {
+                  setEmailSent(false);
+                  setContactMail({});
+                  SetfullForm(false);
+                  setValidationEmailMessage("");
+                }, 5000);
 
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+                e.target.reset();
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            )
+        : "";
+    }
   };
 
   const formVariants = {
@@ -107,10 +154,6 @@ export default function Contact() {
 
   return (
     <div className="w-full px-8 md:px-20 pt-32 md:pt-20 py-8 " id="contact">
-      {/* <div
-      className="w-full min-h-screen px-8 md:px-20 pt-32 md:pt-20 py-8 lg:py-20 "
-      id="contact"
-    > */}
       <div className="flex items-center justify-center text-light">
         <h3 className="text-4xl">Contact</h3>
       </div>
@@ -174,12 +217,21 @@ export default function Contact() {
                 <div className="col-span-2 text-right">
                   <button
                     type="submit"
-                    className="py-2 px-4  bg-slate-800 border border-gray-700 text-gray-400 hover:text-gray-400 hover:border-gray-600 hover:scale-105 focus:ring-offset-indigo-200 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className={`py-2 px-4 text-gray-400  bg-slate-800 border border-gray-700  hover:border-gray-600 ${
+                      !fullForm ? "hover:text-primary" : ""
+                    }  focus:ring-offset-indigo-200 w-full text-center text-base font-semibold shadow-md rounded-lg`}
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
-                    Send
+                    {isHovering && !fullForm
+                      ? "Please complete the form before submitting!"
+                      : "Send"}
                   </button>
                 </div>
               </motion.div>
+              <div className="py-2 px-4 text-gray-400 text-center">
+                {validationEmailMessage}
+              </div>
             </div>
           </form>
           <AnimatePresence>

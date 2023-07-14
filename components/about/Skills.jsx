@@ -117,7 +117,7 @@ export default function Skills() {
               variants={{
                 hidden: {
                   opacity: 0,
-                  translateY: i % 2 === 0 ? "-10vh" : "10vh",
+                  translateY: i % 2 === 0 ? "-12vh" : "12vh",
                 },
                 visible: { opacity: 1, translateY: 0 },
               }}
@@ -125,7 +125,7 @@ export default function Skills() {
               animate={skillsControl}
               transition={{
                 type: "spring",
-                duration: 0.5,
+                duration: 0.8,
                 delay: i * 0.3,
                 bounce: 0.4,
               }}
