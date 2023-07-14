@@ -153,8 +153,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full px-8 md:px-20 pt-32 md:pt-20 py-8 " id="contact">
-      <div className="flex items-center justify-center text-light">
+    <div id="contact" className="w-full min-h-[90vh] px-8 md:px-20  py-8 ">
+      <div className="flex items-center justify-center text-light pt-20 md:pt-10">
         <h3 className="text-4xl">Contact</h3>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] ">
@@ -208,7 +208,7 @@ export default function Contact() {
                       id="contact-form-comment"
                       placeholder="Enter your message"
                       name="message"
-                      rows="5"
+                      rows="8"
                       cols="40"
                       onChange={handleChange}
                     ></textarea>
